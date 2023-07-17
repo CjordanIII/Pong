@@ -1,0 +1,47 @@
+*{
+    background-color: black;
+    color: whitesmoke;
+}
+
+
+
+header{
+    text-align: center;
+}
+/* main pages */
+#pageOneMain{
+    justify-content: center;
+    display: flex;
+    gap: 10rem;
+    margin-top: 25%;
+}
+
+#mainPlayerOne{
+    width: 1300px;
+    height:600px;
+    box-shadow: rgba(224, 224, 241, 0.2) 0px 7px 29px 0px;
+    display: grid;
+    grid-template-columns: 1fr .2fr 1fr .2fr 1fr;
+    margin: 81px 10px 4px 238px;
+}
+.wraper-left{
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-items: center;
+
+}
+
+.left-side{
+    width: 20px;
+    height: 80px;
+    background-color: whitesmoke;
+}
+
+
+
+footer{
+    margin-top: 10%;
+    text-align: center;
+}
+
