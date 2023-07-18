@@ -36,6 +36,7 @@ header{
     width: 20px;
     height: 80px;
     background-color: whitesmoke;
+    transition: top .5s ease;
 }
 
 

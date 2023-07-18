@@ -1,6 +1,5 @@
 const leftSqr = document.querySelector('.left-side')
 
-console.log(leftSqr)
 
 
 
@@ -17,7 +16,6 @@ console.log(leftSqr)
     
     // add methods herfe
 }
-export const mainClass = new PongBallAndPattles()
-const arrPongBallAndPattles = []
+ const mainClass = new PongBallAndPattles()
 
-export {PongBallAndPattles,leftSqr}
+export {PongBallAndPattles,leftSqr,mainClass}
