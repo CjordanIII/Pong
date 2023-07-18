@@ -20,4 +20,4 @@ console.log(leftSqr)
 export const mainClass = new PongBallAndPattles()
 const arrPongBallAndPattles = []
 
-export {PongBallAndPattles}
+export {PongBallAndPattles,leftSqr}
