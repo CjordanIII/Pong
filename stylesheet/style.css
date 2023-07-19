@@ -15,7 +15,7 @@ header{
     gap: 10rem;
     margin-top: 25%;
 }
-
+/* background */
 #mainPlayerOne{
     width: 1300px;
     height:600px;
@@ -24,6 +24,9 @@ header{
     grid-template-columns: 1fr .2fr 1fr .2fr 1fr;
     margin: 81px 10px 4px 238px;
 }
+
+
+/* left side paddle */
 .wraper-left{
     display: flex;
     grid-column-start: 1;
