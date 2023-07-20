@@ -1,7 +1,7 @@
 import {PongBallAndPattles as PongBallAndPattles, mainClass as mainClass, leftSqr as leftSqr}from './script.js'
 
 // ======================================== Move left side 
-const moveBy = 2; // movement speed
+const moveBy = 3; // movement speed
 let isMovingUp = false;
 let isMovingDown = false;
 
@@ -17,19 +17,18 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 // listens out for keys up/down
 window.addEventListener('keydown', (e) => {
-  if (e.key === 'w') {
+  if (e.key === 'w' || e.key === 'W') {
     isMovingUp = true;
-  } else if (e.key === 's') {
+  } else if (e.key === 's'|| e.key === 'S') {
     isMovingDown = true;
   }
 });
 
 window.addEventListener('keyup', (e) => {
-    if (e.key === 'w') {
+    if (e.key === 'w' || e.key === 'W' ) {
         isMovingUp = false;
-    } else if (e.key === 's') {                   
+    } else if (e.key === 's' || e.key === 'S') {                   
         isMovingDown = false;
-
     }
 
 });
@@ -47,10 +46,7 @@ function updatePosition() {
     }
   }
 
-
-
-
-
+  
   if(locations.y>140){
     if (isMovingUp) {
       leftSqr.style.top = parseFloat(leftSqr.style.top) - moveBy + 'px';
@@ -65,7 +61,7 @@ function updatePosition() {
 
 
     // ==== disables down buttons
-  if(locations.y === 600.5){
+  if(locations.y === 630){
      if (!isMovingDown) {
       leftSqr.style.top = parseFloat(leftSqr.style.top) + moveBy + 'px';
     }
@@ -73,7 +69,7 @@ function updatePosition() {
       leftSqr.style.top = parseFloat(leftSqr.style.top) - 40 + 'px'
     }
   }
-  if(locations.y <= 600.5){
+  if(locations.y <= 630){
     if (isMovingDown) {
      leftSqr.style.top = parseFloat(leftSqr.style.top) + moveBy + 'px';
    }
