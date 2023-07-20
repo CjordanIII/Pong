@@ -20,7 +20,7 @@ function range(start, stop, step){
     if (typeof step=='undefined'){
         step = 1;
     };
-    var result = [];
+    let result = [];
     for (let i=start; step>0 ? i<stop : i>stop; i+=step){
         result.push(i);
     };
@@ -81,6 +81,7 @@ setInterval(() => {
 
     }
     // left and right boundrys
+
     if(ballbouncesright>=boardbouncds.right){
         right = false
         updown = Math.floor(Math.random()*2)
@@ -89,19 +90,31 @@ setInterval(() => {
 
     }
 
-    if(range(ballbounds.x,paddleboundry.y)[0]){
-        console.log(range(ballbounds.x,paddleboundry.y))
-        if(ballbounceleft<paddleboundry.y){ // left boundery 
-            right = true
-            updown = Math.floor(Math.random()*2)
-            up = leftright?true:false
-            // console.log('where the paddle is==>',paddleboundry.y)
-            // console.log('where the ball is==>',ballbounds.y)
-            
+
+
+        // console.log(range(ballbounds.x,paddleboundry.y))
+
+
+        let div2 = paddleboundry
+        let div1 = ballbounds
+        
+        function touching(d1,d2){
+            let ox = Math.abs(d1.x - d2.x) < (d1.x < d2.x ? d2.width : d1.width);
+            let oy = Math.abs(d1.y - d2.y) < (d1.y < d2.y ? d2.height : d1.height);
+            return ox && oy;
+        }
+        
+        let t = touching(div1,div2) 
+        console.log(t)
+
+        if(t){
+            if(ballbounceleft<=boardbouncds.left){
+                right = true
+                updown = Math.floor(Math.random()*2)
+                up = leftright?true:false
+            }
     
         }
-    }
-
 }, 1);
 
 
