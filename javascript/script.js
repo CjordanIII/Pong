@@ -1,6 +1,3 @@
-const leftSqr = document.querySelector('.left-side')
-
-
 
 
  class PongBallAndPattles{
@@ -18,4 +15,4 @@ const leftSqr = document.querySelector('.left-side')
 }
  const mainClass = new PongBallAndPattles()
 
-export {PongBallAndPattles,leftSqr,mainClass}
+export {PongBallAndPattles,mainClass}

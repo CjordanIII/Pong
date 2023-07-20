@@ -34,6 +34,9 @@ header{
     border-radius: 0px;
     border-radius: 50%;
     position: absolute;
+    top: 399px;
+    left: 700px;
+    transition: top .5s ease;
     /* may need to change to absolute same to main */
 }
 

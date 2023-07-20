@@ -1,10 +1,10 @@
-import {PongBallAndPattles as PongBallAndPattles, mainClass as mainClass, leftSqr as leftSqr}from './script.js'
+import {PongBallAndPattles as PongBallAndPattles, mainClass as mainClass}from './script.js'
 
 // ======================================== Move left side 
 const moveBy = 3; // movement speed
 let isMovingUp = false;
 let isMovingDown = false;
-
+const leftSqr = document.querySelector('.left-side')
 
 
 
@@ -107,5 +107,5 @@ class LeftPong extends PongBallAndPattles{
 
 
 const leftpong = new LeftPong()
-console.log(mainClass)
-console.log(leftpong)
+
+export {leftSqr}
