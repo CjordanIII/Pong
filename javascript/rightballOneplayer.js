@@ -1,40 +1,42 @@
 
 
+
+
 // ======================================== Move left side 
 const moveBy = 3; // movement speed
 let isMovingUp = false;
 let isMovingDown = false;
-const leftSqr = document.querySelector('.left-side')
+const rightSqr = document.querySelector('.right-side')
 
 
 
 
 
 window.addEventListener('DOMContentLoaded', () => {
-  leftSqr.style.position = 'absolute';
-  leftSqr.style.top = "399.438px";
+    rightSqr.style.position = 'absolute';
+    rightSqr.style.top = "399.438px";
 
 });
 // listens out for keys up/down
 window.addEventListener('keydown', (e) => {
-  if (e.key === 'w' || e.key === 'W') {
+  if (e.key === 'ArrowUp' || e.key === 'ArrowUp') {
     isMovingUp = true;
-  } else if (e.key === 's'|| e.key === 'S') {
+  } else if (e.key === 'ArrowDown'|| e.key === 'ArrowDown') {
     isMovingDown = true;
   }
 });
 
 window.addEventListener('keyup', (e) => {
-    if (e.key === 'w' || e.key === 'W' ) {
+    if (e.key === 'ArrowUp' || e.key === 'ArrowUp' ) {
         isMovingUp = false;
-    } else if (e.key === 's' || e.key === 'S') {                   
+    } else if (e.key === 'ArrowDown' || e.key === 'ArrowDown') {                   
         isMovingDown = false;
     }
 
 });
 //==== position=========
 function updatePosition() {
-  let locations = leftSqr.getBoundingClientRect()
+  let locations = rightSqr.getBoundingClientRect()
 
 
 
@@ -42,36 +44,36 @@ function updatePosition() {
   // ==== disables up buttons
   if(locations.y===140){
     if (!isMovingUp) {
-      leftSqr.style.top = parseFloat(leftSqr.style.top) - moveBy + 'px';
+        rightSqr.style.top = parseFloat(rightSqr.style.top) - moveBy + 'px';
     }
   }
 
   
   if(locations.y>140){
     if (isMovingUp) {
-      leftSqr.style.top = parseFloat(leftSqr.style.top) - moveBy + 'px';
+        rightSqr.style.top = parseFloat(rightSqr.style.top) - moveBy + 'px';
     }
   }
 
 
-  // ======== adds boundrys to up button
+  // ======== adds boundrys to up button ============
   else{
-    leftSqr.style.top = parseFloat(leftSqr.style.top) + moveBy + 13 + 'px';
+    rightSqr.style.top = parseFloat(rightSqr.style.top) + moveBy + 13 + 'px';
   }
 
 
     // ==== disables down buttons
   if(locations.y === 630){
      if (!isMovingDown) {
-      leftSqr.style.top = parseFloat(leftSqr.style.top) + moveBy + 'px';
+        rightSqr.style.top = parseFloat(rightSqr.style.top) + moveBy + 'px';
     }
     if (isMovingDown){
-      leftSqr.style.top = parseFloat(leftSqr.style.top) - 40 + 'px'
+        rightSqr.style.top = parseFloat(rightSqr.style.top) - 40 + 'px'
     }
   }
   if(locations.y <= 630){
     if (isMovingDown) {
-     leftSqr.style.top = parseFloat(leftSqr.style.top) + moveBy + 'px';
+        rightSqr.style.top = parseFloat(rightSqr.style.top) + moveBy + 'px';
    }
  }
 
@@ -79,7 +81,7 @@ function updatePosition() {
 
  // ==== adds boundrys to down button=======
  else{
-  leftSqr.style.top = parseFloat(leftSqr.style.top) - moveBy  + 'px';
+    rightSqr.style.top = parseFloat(rightSqr.style.top) - moveBy  + 'px';
 }
 
 
@@ -102,4 +104,4 @@ updatePosition();
 
 
 
-export {leftSqr}
+export {rightSqr}
