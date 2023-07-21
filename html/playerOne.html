@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pong one player</title>
+    <title>pong two player</title>
     <!-- =======================scripts========================= -->
     <script src="/javascript/rightballOneplayer.js" defer type="module"></script>
     <script src="/javascript/leftPattle.js" defer type="module"></script>
@@ -15,14 +15,19 @@
 </head>
 <body>
     <header>
-        <h1>One Player</h1>
+        <h2 class="score1">P1: </h2>
+        <h1>two Player</h1>
+        <h2 class="score2">p2: </h2>
     </header>
     <main id="mainPlayerOne">
         <div class="left-side"></div>
         <div class ='ball'></div>
         <div class="right-side"></div>
     </main>
-    
+    <aside>
+        <button id="p1">P1 score +1 </button>
+        <button id ='p2'>P2 score +1 </button>
+    </aside>
 </body>
 <footer>
     <h3><a href="index.html">return home</a></h3>
