@@ -27,7 +27,7 @@ function range(start, stop, step){
     return result;
 };
 
-let velocity = 1.8
+let velocity = 5
 
 // updates milisecs where the ball is
 setInterval(() => {
@@ -99,10 +99,11 @@ setInterval(() => {
         let div1 = ballbounds
         
         function touching(d1,d2){
-            let ox = Math.abs(d1.x - d2.x) < (d1.x < d2.x ? d2.width : d1.width);
-            let oy = Math.abs(d1.y - d2.y) < (d1.y < d2.y ? d2.height : d1.height);
+            let ox = Math.abs(d1.x - d2.x) < (d1.x < d2.x ? d2.width+120 : d1.width);
+            let oy = Math.abs(d1.y - d2.y) < (d1.y < d2.y ? d2.height-55 : d1.height+40); //higtbox
             return ox && oy;
         }
+
         
         let t = touching(div1,div2) 
         console.log(t)
@@ -115,6 +116,7 @@ setInterval(() => {
             }
     
         }
+
 }, 1);
 
 

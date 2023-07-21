@@ -36,7 +36,7 @@ header{
     position: absolute;
     top: 399px;
     left: 700px;
-    transition: top .5s ease;
+    transition: top 4s ease;
     /* may need to change to absolute same to main */
 }
 
