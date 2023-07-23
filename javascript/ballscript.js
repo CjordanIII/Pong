@@ -12,9 +12,13 @@ let right = leftright?true:false
 
 let updown = Math.floor(Math.random()*2)
 let up = leftright?true:false
-//! may reuse move files in to tools folder
+
 let score = 0
 let velocity = 5
+let start = true
+
+
+
 
 // updates milisecs where the ball is
 function render(){
@@ -126,7 +130,7 @@ function render(){
 
 
 
-render()
+
 
 
 
@@ -136,7 +140,8 @@ const p1 = document.querySelector("#p1")
 let p1S = document.querySelector('.score1')
 let p2S = document.querySelector('.score2')
 const p2 = document.querySelector("#p2")
-
+const div = document.querySelector('.modle')
+const reset = document.querySelector('.reset')
 let p1s = 0
 let p2s = 0
 
@@ -144,15 +149,36 @@ let p2s = 0
 p1.addEventListener('click',()=>{
     p1s = p1s + 1
     p1S.textContent = "P1: " + p1s
-
+    if(p1s === 10){
+        winner('Player one wins')
+    }
 })
+
+
+
 p2.addEventListener('click',()=>{
     p2s = p2s + 1
     p2S.textContent = "P2: " + p2s
-
+    if(p2s === 10){
+        winner('Player two wins')
+    }
+    
 })
 
+function winner(text){
+    let h1 = document.createElement('h1')
+    h1.textContent = text
+    h1.setAttribute('class',"winner")
+    div.appendChild(h1)
+}
+const getWinner = document.querySelector('.modle')
+reset.addEventListener('click', ()=>{
+   getWinner.remove()
+   p1S.textContent = "P1: "
+   p2S.textContent = "P2: "
+})
 
+render()
 
 
 //TODO make the  goal and make the outlines for the border

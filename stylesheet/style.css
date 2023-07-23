@@ -10,6 +10,8 @@ header{
     justify-content: space-evenly
 }
 /* main pages */
+
+
 #pageOneMain{
     justify-content: center;
     display: flex;
@@ -38,11 +40,17 @@ header{
     top: 399px;
     left: 700px;
     transition: top 4s ease;
-    /* may need to change to absolute same to main */
 }
 
 
-
+.winner{
+    position: absolute;
+    top: 300px;
+    left:700px;
+    background-color: azure;
+    color:black;
+    padding: 100px 100px  100px  100px ;
+}
 
 
 /* left side paddle */
@@ -51,6 +59,5 @@ header{
 footer{
     margin-top: 5%;
     text-align: center;
-  
 }
 
