@@ -1,6 +1,7 @@
 
 
 <center><h1>Pong</h1></center>
+<a href="https://pong-perscholas-project.netlify.app/">Play the game</a>
 <h1>Motivation</h1>
 <p> I have see this game I was thinking this or brick brakier pong brings me back to early games on the phone like on black berry early iphone and android phone.This game was fun to make and a lot more challenging that I though.<a href="https://americanhistory.si.edu/blog/2012/04/pong-atari-and-the-origins-of-the-home-video-game.html#:~:text=He%20hired%20Al%20Alcorn%20and,small%20bar%20in%20Sunnyvale%2C%20California."> learn more about pong</a>.</p>
 <h1>Build status</h1>
