@@ -57,5 +57,5 @@
 
 
 <script>
-  window.location.href = "html/index.html";
+  window.location.href = "./html/index.html";
 </script>
