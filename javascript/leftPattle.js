@@ -8,8 +8,6 @@ const leftSqr = document.querySelector('.left-side')
 
 
 
-
-
 window.addEventListener('DOMContentLoaded', () => {
   leftSqr.style.position = 'absolute';
   leftSqr.style.top = "399.438px";
@@ -20,7 +18,9 @@ window.addEventListener('keydown', (e) => {
   if (e.key === 'w' || e.key === 'W') {
     isMovingUp = true;
   } else if (e.key === 's'|| e.key === 'S') {
+
     isMovingDown = true;
+
   }
 });
 
@@ -32,6 +32,11 @@ window.addEventListener('keyup', (e) => {
     }
 
 });
+
+
+
+
+
 //==== position=========
 function updatePosition() {
   let locations = leftSqr.getBoundingClientRect()

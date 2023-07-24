@@ -43,6 +43,7 @@ header{
 }
 
 
+
 .winner{
     position: absolute;
     top: 300px;
@@ -57,7 +58,22 @@ header{
 
 
 footer{
+
     margin-top: 5%;
+    text-align: center;
+    
+
+}
+
+/* instrunctions */
+
+p{
     text-align: center;
 }
 
+.white{
+    padding: 5px 5px 5px 5px ;
+    background-color: aqua;
+    color: black;
+    text-align: center;
+}
